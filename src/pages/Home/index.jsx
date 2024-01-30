@@ -1,31 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Header from "components/Header";
+import { Container, Presentation, Portfolio } from "./style";
+import Carousel from "components/Carousel";
+import Footer from "components/Footer";
+import IconWhatsApp from "components/IconWhatsApp";
+import Photo1 from "assets/images/photo1.png";
 
 const Home = () => {
   return (
     <>
-      <header>
-        <h1>JKfest - Decoração de Festas</h1>
-      </header>
-
-      <nav>
-        <a href="#">Início</a>
-        <a href="#">Serviços</a>
-        <a href="#">Portfólio</a>
-        <a href="#">Contato</a>
-      </nav>
-
-      <section class="welcome-section">
-        <h2>Bem-vindo à JKfest</h2>
-        <p>
-          Transformando suas festas em momentos inesquecíveis com decorações
-          encantadoras!
-        </p>
-        <img src="decoracao-festa.jpg" alt="Decoração de festa" />
-      </section>
-
-      <footer>
-        <p>&copy; 2024 JKfest - Decoração de Festas</p>
-      </footer>
+      <Container id="Home">
+        <Header />
+        <Carousel />
+        <Presentation>
+          <main className="content">
+            <h1>Nós fazemos toda a decoração do seu jeito!</h1>
+            <div className="texts">
+              <p>
+                Realize toda sua festa com a JKFest. <br />
+                Somos uma empresa localizado na cidade do Crato - CE, que
+                proporciona todo um serviço completo de decoração de festas e
+                tornamos sua decoração um grande sucesso!
+              </p>
+            </div>
+            <a href="/portfolio">
+              Conheça ainda mais o nosso trabalho{" "}
+              <i className="fas fa-arrow-right"></i>
+            </a>
+          </main>
+        </Presentation>
+        <Portfolio>
+          <h1>Veja algumas de nossas decorações</h1>
+          <section className="images"></section>
+        </Portfolio>
+      </Container>
+      <IconWhatsApp />
     </>
   );
 };
