@@ -30,8 +30,13 @@ const Home = () => {
           </main>
         </Presentation>
         <Portfolio>
-          <h1>Veja algumas de nossas decorações</h1>
-          <section className="images"></section>
+          <h1 className="title">Veja algumas de nossas decorações</h1>
+          <section className="images">
+            <img src={Photo1} alt="" className="photo left" />
+            <img src={Photo1} alt="" className="photo right" />
+            <img src={Photo1} alt="" className="photo left" />
+            <img src={Photo1} alt="" className="photo right" />
+          </section>
         </Portfolio>
       </Container>
       <IconWhatsApp />

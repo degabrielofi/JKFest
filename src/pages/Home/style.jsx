@@ -46,16 +46,31 @@ export const Presentation = styled.div`
 `;
 
 export const Portfolio = styled.div`
-  font-family: "Gloria Hallelujah", cursive;
-  display: flex;
-  justify-content: center;
+  .title {
+    font-family: "Gloria Hallelujah", cursive;
+    display: flex;
+    justify-content: center;
+  }
 
   .images {
-    margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 6px;
+    width: 100%;
+  }
+
+  .images img {
+    width: 100%;
+  }
+
+  .images .right img {
+    position: relative;
+    top: 100%;
+  }
+
+  .photo:nth-child(2n + 1) {
+    clear: both;
   }
 `;
