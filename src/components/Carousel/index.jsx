@@ -67,7 +67,7 @@ const Carousel = () => {
             id="svg"
             viewBox="0 0 1440 590"
             xmlns="http://www.w3.org/2000/svg"
-            class="transition duration-300 ease-in-out delay-150"
+            className="transition duration-300 ease-in-out delay-150"
           >
             <path
               d="M 0,600 L 0,112 C 41.26988217967599,130.08284241531663 82.53976435935198,148.16568483063327 155,138 C 227.46023564064802,127.83431516936672 331.110824742268,89.42010309278349 389,75 C 446.889175257732,60.57989690721651 459.0169366715759,70.15390279823272 520,90 C 580.9830633284241,109.84609720176728 690.8214285714286,139.9642857142857 752,136 C 813.1785714285714,132.0357142857143 825.6973490427098,93.98895434462445 873,84 C 920.3026509572902,74.01104565537555 1002.389175257732,92.0798969072165 1075,100 C 1147.610824742268,107.9201030927835 1210.7459499263623,105.69145802650958 1270,106 C 1329.2540500736377,106.30854197349042 1384.6270250368188,109.15427098674522 1440,112 L 1440,600 L 0,600 Z"
@@ -75,7 +75,7 @@ const Carousel = () => {
               stroke-width="0"
               fill="#0a90cd"
               fill-opacity="0.62"
-              class="transition-all duration-300 ease-in-out delay-150 path-0"
+              className="transition-all duration-300 ease-in-out delay-150 path-0"
             ></path>
 
             <path
@@ -84,7 +84,7 @@ const Carousel = () => {
               stroke-width="0"
               fill="#0a90cd"
               fill-opacity="0.73"
-              class="transition-all duration-300 ease-in-out delay-150 path-1"
+              className="transition-all duration-300 ease-in-out delay-150 path-1"
             ></path>
 
             <path
@@ -93,7 +93,7 @@ const Carousel = () => {
               stroke-width="0"
               fill="#0a90cd"
               fill-opacity="1"
-              class="transition-all duration-300 ease-in-out delay-150 path-2"
+              className="transition-all duration-300 ease-in-out delay-150 path-2"
             ></path>
           </svg>
         </section>

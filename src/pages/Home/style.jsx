@@ -6,7 +6,7 @@ export const Container = styled.div``;
 export const Presentation = styled.div`
   font-family: "Gloria Hallelujah", cursive;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   margin-top: -1%;
   background: url(${PatternCircles}) #0a90cd no-repeat top fixed;
   display: flex;
@@ -19,6 +19,7 @@ export const Presentation = styled.div`
   }
 
   h1 {
+    margin-top: -10%;
     font-size: 48px;
     color: #fff;
   }
@@ -46,8 +47,10 @@ export const Presentation = styled.div`
 `;
 
 export const Portfolio = styled.div`
+  width: 100%;
+  font-family: "Gloria Hallelujah", cursive;
+
   .title {
-    font-family: "Gloria Hallelujah", cursive;
     display: flex;
     justify-content: center;
   }
@@ -55,22 +58,116 @@ export const Portfolio = styled.div`
   .images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 6px;
-    width: 100%;
+    justify-items: center;
   }
 
   .images img {
     width: 100%;
   }
 
-  .images .right img {
-    position: relative;
-    top: 100%;
+  .images .photos1 {
+    width: 90%;
   }
 
-  .photo:nth-child(2n + 1) {
-    clear: both;
+  .images .photos2 {
+    width: 90%;
+    margin-top: 2rem;
+  }
+
+  .images .photos1 img,
+  .images .photos2 img {
+    margin-top: 1rem;
+  }
+
+  .link {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    z-index: 20;
+  }
+
+  a {
+    font-size: 35px;
+    color: #111;
+  }
+
+  i {
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.5s;
+  }
+
+  a:hover i {
+    margin-left: 15px;
+    transition: all 0.5s;
+  }
+`;
+
+export const LinkInstagram = styled.div`
+  font-family: "Gloria Hallelujah", cursive;
+  width: 100%;
+
+  svg {
+    position: relative;
+    margin-top: -10rem;
+    z-index: -20;
+  }
+
+  .insta {
+    margin-top: -1%;
+    background-color: #d8096b;
+    height: 50vh;
+  }
+
+  .insta .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .insta h1 {
+    margin-top: -2rem;
+    font-size: 48px;
+    color: #fff;
+  }
+
+  .insta p {
+    font-size: 25px;
+    margin-top: -1rem;
+    color: #fff;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1rem;
+    align-items: center;
+    height: 48px;
+    border-radius: 0.4rem;
+    font-weight: 600;
+    padding: 0 1.2rem;
+    color: #ddd;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1rem rgba(143, 142, 142, 0.15) !important;
+    background: #000000;
+    transition: all 0.5s;
+  }
+
+  .followers {
+    font-size: 0.8rem;
+    color: #7f7f7f;
+  }
+
+  a:hover {
+    background: #2b2a2a;
+    transition: all 0.5s;
+  }
+
+  i {
+    font-size: 15px;
+    margin-right: 0.5rem;
   }
 `;

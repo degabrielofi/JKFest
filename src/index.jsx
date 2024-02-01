@@ -14,7 +14,7 @@ root.render(
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/sobre" element={<About />} />
-        <Route path="/portfolio" element={<Gallery />} />
+        <Route path="/galeria" element={<Gallery />} />
         <Route path="/orcamento" element={<Budget />} />
       </Routes>
     </BrowserRouter>
