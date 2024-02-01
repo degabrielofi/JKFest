@@ -26,13 +26,19 @@ const Footer = () => {
                   <ul>
                     <li>
                       <span>Fale Conosco:</span>
-                      <a href="" target="--blank">
+                      <a
+                        href="https://api.whatsapp.com/send?phone=558899086157&text=Ol%C3%A1,%20entrei%20em%20contato%20pelo%20site,%20gostaria%20de%20um%20or%C3%A7amento!"
+                        target="--blank"
+                      >
                         (88) 99908-6157
                       </a>
                     </li>
                     <li>
                       <span>Localização:</span>
-                      <a href="" target="--blank">
+                      <a
+                        href="https://maps.app.goo.gl/vmiwpv7Eh1c8Xigx5"
+                        target="--blank"
+                      >
                         Crato - CE
                       </a>
                     </li>

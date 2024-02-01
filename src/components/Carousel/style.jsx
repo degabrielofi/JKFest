@@ -40,8 +40,9 @@ export const CarouselContainer = styled.div`
     opacity: 0;
   }
 
-  @media (max-width: 991px) {
+  @media (max-width: 992px) {
     .text-container h1 {
+      margin: 0 5%;
       font-size: 1rem;
     }
   }

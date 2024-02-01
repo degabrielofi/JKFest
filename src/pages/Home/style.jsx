@@ -44,6 +44,26 @@ export const Presentation = styled.div`
     margin-left: 15px;
     transition: all 0.5s;
   }
+
+  @media (max-width: 992px) {
+    margin-top: -2%;
+
+    h1 {
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+    a {
+      font-size: 15px;
+    }
+
+    i {
+      font-size: 15px;
+    }
+  }
 `;
 
 export const Portfolio = styled.div`
@@ -101,6 +121,20 @@ export const Portfolio = styled.div`
     margin-left: 15px;
     transition: all 0.5s;
   }
+
+  @media (max-width: 992px) {
+    .title {
+      font-size: 15px;
+    }
+
+    a {
+      font-size: 20px;
+    }
+
+    i {
+      font-size: 20px;
+    }
+  }
 `;
 
 export const LinkInstagram = styled.div`
@@ -116,13 +150,12 @@ export const LinkInstagram = styled.div`
   .insta {
     margin-top: -1%;
     background-color: #d8096b;
-    height: 50vh;
+    height: 100%;
   }
 
   .insta .content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
 
@@ -147,6 +180,7 @@ export const LinkInstagram = styled.div`
     height: 48px;
     border-radius: 0.4rem;
     font-weight: 600;
+    margin-bottom: 3rem;
     padding: 0 1.2rem;
     color: #ddd;
     border: none;
@@ -169,5 +203,21 @@ export const LinkInstagram = styled.div`
   i {
     font-size: 15px;
     margin-right: 0.5rem;
+  }
+
+  @media (max-width: 992px) {
+    .insta {
+      margin-top: -3%;
+    }
+
+    .insta h1 {
+      margin-top: 1rem;
+      font-size: 25px;
+    }
+
+    .insta p {
+      margin: 0 1.5rem 1rem 1.5rem;
+      font-size: 15px;
+    }
   }
 `;

@@ -138,4 +138,14 @@ export const HeaderContainer = styled.header`
     opacity: 1;
     transition: all 2s;
   }
+
+  @media (max-width: 992px) {
+    header .icons i {
+      font-size: 1rem;
+    }
+
+    header .logo img {
+      max-width: 60px;
+    }
+  }
 `;
