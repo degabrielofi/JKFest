@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Scroll } from "./style.jsx";
 import { FiArrowUpCircle } from "react-icons/fi";
 import Icon from "assets/icons/Icon_circle.png";
-import Background from "assets/images/Background.png";
 
 const Footer = () => {
   let atualDate = new Date().getFullYear();
@@ -16,8 +15,6 @@ const Footer = () => {
     <Container>
       <footer>
         <section className="container">
-          <img src={Background} className="background" alt="BackgroundImage" />
-
           <div className="content">
             <section className="links">
               <div className="logo">

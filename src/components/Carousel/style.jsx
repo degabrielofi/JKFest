@@ -39,6 +39,12 @@ export const CarouselContainer = styled.div`
   .fadeOut {
     opacity: 0;
   }
+
+  @media (max-width: 991px) {
+    .text-container h1 {
+      font-size: 1rem;
+    }
+  }
 `;
 
 export const WavesAnimation = styled.div`

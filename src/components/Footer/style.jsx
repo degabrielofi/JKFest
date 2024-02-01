@@ -1,56 +1,45 @@
 import styled from "styled-components";
+import Background from "assets/images/Background.png";
 
 export const Container = styled.div`
+  width: 100%;
   font-family: "Gloria Hallelujah", cursive;
+  background: url(${Background}) no-repeat center;
+  background-size: cover;
 
-  .container .background {
-    filter: blur(4px);
-    width: 100%;
-    height: 70vh;
-    object-fit: cover;
-  }
-
-  .container .content {
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: -30%;
+  .container {
+    backdrop-filter: blur(5px);
   }
 
   .container .content .links {
     display: flex;
     align-items: center;
-    padding: 0 10%;
+    padding: 5% 10%;
   }
 
   .container .content .links .logo {
     width: 15%;
-    display: flex;
-    justify-content: flex-start;
   }
 
   .container .content .links .logo img {
     width: 100%;
   }
 
-  .container .content .links .contacts {
-    margin-left: 5%;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-left: 2rem;
   }
 
-  ul {
-    width: 100%;
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
+  li {
     margin: 0 2rem;
   }
 
   .container .content .row {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 10%;
+    padding: 0 10%;
   }
 
   .container .content .links a {
@@ -83,11 +72,43 @@ export const Container = styled.div`
   .copy h4 {
     margin: 0 1rem;
     color: #fff;
+    font-weight: 800;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 992px) {
+    .container .content .links .logo {
+      width: 30%;
+    }
+
+    .container .content .links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    ul {
+      flex-direction: column;
+      margin-left: 0;
+    }
+
+    li {
+      margin: 0;
+    }
+
+    .container .content .row {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .icons {
+      margin-top: 1rem;
+    }
+
+    .container .content .row .icons a {
+      margin: 0 1rem;
+    }
+
     .copy h4 {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
     }
   }
 `;

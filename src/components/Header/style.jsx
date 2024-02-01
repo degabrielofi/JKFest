@@ -27,7 +27,7 @@ export const HeaderContainer = styled.header`
   }
 
   header .logo img {
-    max-width: 150px;
+    max-width: 100px;
   }
 
   header .icons i {
