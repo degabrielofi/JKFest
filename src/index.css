@@ -5,3 +5,11 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.GalleryImage {
+  width: auto;
+  max-width: 80%;
+}
+
+@media (max-width: 992px) {
+}

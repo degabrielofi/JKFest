@@ -68,8 +68,8 @@ const Header = () => {
           ) : (
             ""
           )}
-          {window.location.pathname !== "/portfolio" ? (
-            <a href="/portfolio">Nossa Galeria</a>
+          {window.location.pathname !== "/galeria" ? (
+            <a href="/galeria">Nossa Galeria</a>
           ) : (
             ""
           )}
