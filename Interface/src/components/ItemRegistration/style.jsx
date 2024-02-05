@@ -1,5 +1,78 @@
 import styled from "styled-components";
 
+export const FormContainer = styled.div`
+  font-family: "Gloria Hallelujah", cursive;
+
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #d8096b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+`;
+
+export const Content = styled.h2`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+`;
+
+export const FormGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  h3 {
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+`;
+
+export const Label = styled.label`
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+`;
+
+export const Input = styled.input`
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+`;
+
+export const Select = styled.select`
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+`;
+
+export const Button = styled.button`
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+
+export const FileUpload = styled.input`
+  margin-top: 5px;
+`;
+
+export const ErrorMessage = styled.p`
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 10px;
+`;
+
 export const WavesAnimation = styled.div`
   .party {
     position: relative;
@@ -69,71 +142,4 @@ export const WavesAnimation = styled.div`
       );
     }
   }
-`;
-
-export const FormContainer = styled.div`
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-`;
-
-export const FormTitle = styled.h2`
-  text-align: center;
-  color: #333;
-`;
-
-export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-`;
-
-export const FormGroup = styled.div`
-  margin-bottom: 20px;
-`;
-
-export const Label = styled.label`
-  font-size: 16px;
-  margin-bottom: 8px;
-  color: #333;
-`;
-
-export const Input = styled.input`
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-`;
-
-export const Select = styled.select`
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-`;
-
-export const Button = styled.button`
-  padding: 10px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #0056b3;
-  }
-`;
-
-export const FileUpload = styled.input`
-  margin-top: 5px;
-`;
-
-export const ErrorMessage = styled.p`
-  color: #d9534f;
-  font-size: 14px;
-  margin-top: 10px;
 `;
