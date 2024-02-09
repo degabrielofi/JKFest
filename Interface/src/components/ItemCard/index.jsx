@@ -8,7 +8,7 @@ const ItemCard = ({ item, onItemDelete, onAddToCart }) => {
     // Aqui você deve enviar uma solicitação para o servidor para excluir o item
     // Certifique-se de substituir "http://localhost:3001" pelo URL real do seu servidor
     const response = await fetch(
-      `http://localhost:3001/excluir-item/${item._id}`,
+      `https://jkfest-back-end.onrender.com/excluir-item/${item._id}`,
       {
         method: "DELETE",
       }

@@ -31,10 +31,13 @@ const ItemRegistration = () => {
     formData.append("category", itemCategory);
 
     try {
-      const response = await fetch("http://localhost:3001/cadastrar-item", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "https://jkfest-back-end.onrender.com/cadastrar-item",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       if (response.ok) {
         MySwal.fire({

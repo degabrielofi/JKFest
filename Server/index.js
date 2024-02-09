@@ -104,5 +104,7 @@ app.delete("/excluir-item/:itemId", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Servidor está executando em http://localhost:${port}`);
+  console.log(
+    `Servidor está executando em https://jkfest-back-end.onrender.com/items`
+  );
 });

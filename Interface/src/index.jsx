@@ -4,9 +4,9 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import "./index.css";
 import Home from "pages/Home";
 import About from "pages/About";
-import Budget from "pages/Budget";
 import Gallery from "pages/Gallery";
 import RegistrationForm from "components/RegistrationForm";
+import Budget from "pages/Budget";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
