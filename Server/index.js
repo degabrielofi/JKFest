@@ -89,22 +89,6 @@ app.get("/items", async (req, res) => {
   }
 });
 
-const Category = mongoose.model("category", {
-  name: String,
-});
-
-// Rota para obter todas as categorias
-app.get("/categories", async (req, res) => {
-  try {
-    const categories = await Category.find();
-    console.log("Categorias encontradas:", categories); // Adicione esta linha
-    res.json(categories);
-  } catch (error) {
-    console.error("Erro ao buscar categorias:", error);
-    res.status(500).send("Erro interno do servidor");
-  }
-});
-
 app.delete("/excluir-item/:itemId", async (req, res) => {
   try {
     const itemId = req.params.itemId;

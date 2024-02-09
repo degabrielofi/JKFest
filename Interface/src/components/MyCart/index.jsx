@@ -1,69 +1,84 @@
-import React, { useState } from "react";
-import { StyledMyCart } from "./style";
+import React, { useEffect, useState } from "react";
+import { StyledMyCart, CartButton, Overlay } from "./style";
 
-const MyCart = ({ portfolioItems }) => {
-  const [cartItems, setCartItems] = useState([]);
-  console.log(portfolioItems);
+const MyCart = ({
+  cartItems,
+  onRemoveFromCart,
+  onIncreaseQuantity,
+  onDecreaseQuantity,
+}) => {
+  const [cartOpen, setCartOpen] = useState(false);
+  const [includeLabor, setIncludeLabor] = useState(true); // Estado para controlar a inclusão da mão de obra
+  const [totalWithLabor, setTotalWithLabor] = useState(0);
 
-  const addToCart = (item) => {
-    // Verifica se o item já está no carrinho
-    const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
-
-    if (existingItem) {
-      // Se já existe, atualiza a quantidade
-      setCartItems((prevItems) =>
-        prevItems.map((cartItem) =>
-          cartItem.id === item.id
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
-            : cartItem
-        )
-      );
-    } else {
-      // Se não existe, adiciona o item ao carrinho
-      setCartItems((prevItems) => [...prevItems, { ...item, quantity: 1 }]);
-    }
+  const calculateTotalWithLabor = () => {
+    const subtotal = calculateTotal();
+    const laborCost = includeLabor ? 0.4 * subtotal : 0;
+    return subtotal + laborCost;
   };
-
-  const removeFromCart = (itemId) => {
-    // Remove o item do carrinho
-    setCartItems((prevItems) =>
-      prevItems.filter((cartItem) => cartItem.id !== itemId)
-    );
-  };
+  useEffect(() => {
+    setTotalWithLabor(calculateTotalWithLabor());
+  }, [cartItems, includeLabor]);
 
   const calculateTotal = () => {
-    // Calcula o valor total do carrinho
     return cartItems.reduce(
       (total, cartItem) => total + cartItem.price * cartItem.quantity,
       0
     );
   };
 
-  return (
-    <StyledMyCart>
-      <h2>Meu Carrinho</h2>
-      <ul>
-        {cartItems.map((cartItem) => (
-          <li key={cartItem.id}>
-            {cartItem.name} - Quantidade: {cartItem.quantity}{" "}
-            <button onClick={() => removeFromCart(cartItem.id)}>Remover</button>
-          </li>
-        ))}
-      </ul>
-      <p>Valor Total: ${calculateTotal().toFixed(2)}</p>
+  const toggleCart = () => {
+    setCartOpen(!cartOpen);
+  };
 
-      <h2>Adicionar ao Carrinho</h2>
-      <ul>
-        {portfolioItems.map((item) => (
-          <li key={item.id}>
-            {item.name} - ${item.price}{" "}
-            <button onClick={() => addToCart(item)}>
-              Adicionar ao Carrinho
-            </button>
-          </li>
-        ))}
-      </ul>
-    </StyledMyCart>
+  const toggleIncludeLabor = () => {
+    setIncludeLabor(!includeLabor);
+  };
+
+  return (
+    <>
+      <CartButton onClick={toggleCart}>
+        <div className="icon">
+          <i className="fas fa-shopping-cart"></i>
+        </div>
+      </CartButton>
+      {cartOpen && <Overlay onClick={toggleCart} />}
+      <StyledMyCart open={cartOpen}>
+        <div className="title">
+          <h2>Meu Carrinho</h2>
+          <button onClick={toggleCart} className="close">
+            <i className="fas fa-x"></i>
+          </button>
+        </div>
+        <ul>
+          {cartItems.map((cartItem) => (
+            <li key={cartItem._id}>
+              {cartItem.name} - Quantidade: {cartItem.quantity}{" "}
+              <button onClick={() => onIncreaseQuantity(cartItem._id)}>
+                +
+              </button>
+              <button onClick={() => onDecreaseQuantity(cartItem._id)}>
+                -
+              </button>
+              <button onClick={() => onRemoveFromCart(cartItem._id)}>
+                Remover
+              </button>
+            </li>
+          ))}
+        </ul>
+        <label>
+          Incluir Mão de Obra (40%):
+          <input
+            type="checkbox"
+            checked={includeLabor}
+            onChange={toggleIncludeLabor}
+          />
+        </label>
+        <p>
+          Valor Total: R$ <span>{calculateTotalWithLabor().toFixed(2)}</span>
+        </p>
+      </StyledMyCart>
+    </>
   );
 };
 

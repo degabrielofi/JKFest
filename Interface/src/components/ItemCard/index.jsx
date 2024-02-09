@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Card } from "./style";
 
-const ItemCard = ({ item, onItemDelete }) => {
+const ItemCard = ({ item, onItemDelete, onAddToCart }) => {
   const [isDeleted, setIsDeleted] = useState(false);
 
   const handleDelete = async () => {
@@ -27,6 +27,15 @@ const ItemCard = ({ item, onItemDelete }) => {
     }
   };
 
+  const handleAddToCart = () => {
+    if (item._id) {
+      console.log("Chamando handleAddToCart");
+      onAddToCart(item);
+    } else {
+      console.error("Item não tem uma propriedade 'id' definida.");
+    }
+  };
+
   return (
     <>
       {!isDeleted && (
@@ -49,7 +58,9 @@ const ItemCard = ({ item, onItemDelete }) => {
                 <h4> {item.price}</h4>
               </div>
             </div>
-            <button className="item-cart-btn">Add Ao Carrinho</button>
+            <button className="item-cart-btn" onClick={handleAddToCart}>
+              Add Ao Carrinho
+            </button>
           </div>
         </Card>
       )}

@@ -57,7 +57,7 @@ const Footer = () => {
             </section>
             <section className="row">
               <div className="copy">
-                <h4>© {atualDate} @degabrielofi_. All Rights Reserved</h4>
+                <h4>© {atualDate} @jk.fest - All Rights Reserved</h4>
               </div>
               <div className="icons">
                 <a

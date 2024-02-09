@@ -76,7 +76,7 @@ export const Card = styled.div`
     border: 1px;
     font-weight: bold;
     padding: 0.5rem 1rem;
-    background-color: rgb(200, 142, 254);
+    background-color: #9900ef;
     color: #fff;
     border-radius: 2rem;
     font-size: 1.2rem;
@@ -88,6 +88,6 @@ export const Card = styled.div`
 
   .item-cart-btn:hover {
     color: #fff;
-    background-color: rgb(160, 110, 206);
+    filter: brightness(1.1);
   }
 `;

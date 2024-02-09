@@ -28,6 +28,9 @@ import Photo18 from "assets/images/Gallery/JKFest18.jpg";
 import Photo19 from "assets/images/Gallery/JKFest19.jpg";
 import Photo20 from "assets/images/Gallery/JKFest20.jpg";
 import Photo21 from "assets/images/Gallery/JKFest21.jpg";
+import Photo22 from "assets/images/Gallery/JKFest22.jpg";
+import Photo23 from "assets/images/Gallery/JKFest23.jpg";
+import Photo24 from "assets/images/Gallery/JKFest24.jpg";
 
 const images = [
   Photo1,
@@ -51,6 +54,9 @@ const images = [
   Photo19,
   Photo20,
   Photo21,
+  Photo22,
+  Photo23,
+  Photo24,
 ];
 
 const Gallery = () => {
