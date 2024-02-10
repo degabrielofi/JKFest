@@ -43,13 +43,10 @@ const Footer = () => {
                       </a>
                     </li>
                     <li>
-                      <span>Políticas:</span>
-                      <a href="" target="--blank">
-                        Direitos Autorais
-                      </a>
-                      <a href="" target="--blank">
-                        Termos de Uso
-                      </a>
+                      <span>Páginas:</span>
+                      <a href="/">Home</a>
+                      <a href="/sobre">Nossa História</a>
+                      <a href="/galeria">Nossa Galeria</a>
                     </li>
                   </ul>
                 </nav>
