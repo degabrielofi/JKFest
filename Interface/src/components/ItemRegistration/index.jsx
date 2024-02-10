@@ -32,7 +32,7 @@ const ItemRegistration = () => {
 
     try {
       const response = await fetch(
-        "https://jkfest-back-end.onrender.com/cadastrar-item",
+        "https://jkfest.onrender.com/cadastrar-item",
         {
           method: "POST",
           body: formData,

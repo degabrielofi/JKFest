@@ -13,9 +13,7 @@ const ViewItems = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await fetch(
-          "https://jkfest-back-end.onrender.com/items"
-        );
+        const response = await fetch("https://jkfest.onrender.com/items");
         if (response.ok) {
           const data = await response.json();
           setItems(data);
