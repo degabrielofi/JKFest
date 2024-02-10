@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
+  max-width: 100%;
+
   .item-container {
     position: relative;
     background-color: #fff;
@@ -89,5 +91,13 @@ export const Card = styled.div`
   .item-cart-btn:hover {
     color: #fff;
     filter: brightness(1.1);
+  }
+
+  @media (max-width: 992px) {
+    .item-container {
+      width: 90%;
+      margin: 0.5rem;
+      padding: 0.5rem;
+    }
   }
 `;

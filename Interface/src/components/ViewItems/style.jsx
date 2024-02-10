@@ -55,7 +55,7 @@ export const Categories = styled.div`
     box-sizing: border-box;
     box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
     padding: 0.25rem;
-    width: 300px;
+    max-width: 80%;
     font-size: 14px;
   }
 
@@ -75,7 +75,7 @@ export const Categories = styled.div`
     justify-content: center;
     border-radius: 0.5rem;
     border: none;
-    padding: 0.5rem 0;
+    padding: 0.5rem 1rem;
     color: rgba(51, 65, 85, 1);
     transition: all 0.15s ease-in-out;
   }
@@ -203,7 +203,7 @@ export const Items = styled.div`
     align-items: center;
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 492px) {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }

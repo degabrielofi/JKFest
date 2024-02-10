@@ -8,7 +8,7 @@ const MyCart = ({
   onDecreaseQuantity,
 }) => {
   const [cartOpen, setCartOpen] = useState(false);
-  const [includeLabor, setIncludeLabor] = useState(true); // Estado para controlar a inclusão da mão de obra
+  const [includeLabor, setIncludeLabor] = useState(true);
   const [totalWithLabor, setTotalWithLabor] = useState(0);
 
   const calculateTotalWithLabor = () => {

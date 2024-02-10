@@ -8,7 +8,7 @@ import MyCart from "components/MyCart";
 const ViewItems = () => {
   const [items, setItems] = useState([]);
   const [cartItems, setCartItems] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("Todas"); // Adicione essa linha
+  const [selectedCategory, setSelectedCategory] = useState("Todas");
 
   useEffect(() => {
     const fetchItems = async () => {

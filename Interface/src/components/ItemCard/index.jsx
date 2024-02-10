@@ -5,8 +5,6 @@ const ItemCard = ({ item, onItemDelete, onAddToCart }) => {
   const [isDeleted, setIsDeleted] = useState(false);
 
   const handleDelete = async () => {
-    // Aqui você deve enviar uma solicitação para o servidor para excluir o item
-    // Certifique-se de substituir "http://localhost:3001" pelo URL real do seu servidor
     const response = await fetch(
       `https://jkfest.onrender.com/excluir-item/${item._id}`,
       {
@@ -15,10 +13,8 @@ const ItemCard = ({ item, onItemDelete, onAddToCart }) => {
     );
 
     if (response.ok) {
-      // Atualize o estado para refletir a exclusão
       setIsDeleted(true);
 
-      // Chame a função de callback para notificar o componente pai sobre a exclusão
       if (onItemDelete) {
         onItemDelete(item._id);
       }
