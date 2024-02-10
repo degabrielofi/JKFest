@@ -60,7 +60,7 @@ const RegistrationForm = () => {
                   <input
                     key={index}
                     placeholder=""
-                    type="text"
+                    type="number"
                     className="input"
                     maxLength="1"
                     value={digit}
