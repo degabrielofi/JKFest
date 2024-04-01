@@ -8,13 +8,14 @@ export const Container = styled.div`
   background-size: cover;
 
   .container {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(15px);
   }
 
   .container .content .links {
     display: flex;
     align-items: center;
     padding: 5% 10%;
+    border-bottom: 1px solid #c5c5c5;
   }
 
   .container .content .links .logo {
@@ -29,28 +30,24 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     list-style: none;
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 
   li {
     margin: 0 2rem;
   }
 
-  .container .content .row {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10%;
-  }
-
   .container .content .links a {
     display: block;
     color: #000;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
   }
 
-  .container .content .row .icons a {
-    margin: 0 2rem;
+  .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 10%;
   }
 
   span {
@@ -58,21 +55,17 @@ export const Container = styled.div`
     color: #fff;
   }
 
-  i {
-    color: #fff;
-    font-size: 2rem;
-    transition: all 0.5s;
-  }
-
-  i:hover {
-    transform: scale(1.1);
-    transition: all 0.5s;
-  }
-
   .copy h4 {
-    margin: 0 1rem;
     color: #fff;
     font-weight: 800;
+  }
+
+  .degabrieldev {
+    width: 20%;
+  }
+
+  .degabrieldev img {
+    width: 100%;
   }
 
   @media (max-width: 992px) {
@@ -94,21 +87,12 @@ export const Container = styled.div`
       margin: 0;
     }
 
-    .container .content .row {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .icons {
-      margin-top: 1rem;
-    }
-
-    .container .content .row .icons a {
-      margin: 0 1rem;
-    }
-
     .copy h4 {
       font-size: 0.7rem;
+    }
+
+    .degabrieldev img {
+      width: 20%;
     }
   }
 `;
