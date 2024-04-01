@@ -47,6 +47,7 @@ export const Container = styled.div`
   .row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 3% 10%;
   }
 
@@ -88,11 +89,19 @@ export const Container = styled.div`
     }
 
     .copy h4 {
-      font-size: 0.7rem;
+      font-size: 50%;
     }
 
-    .degabrieldev img {
-      width: 20%;
+    .degabrieldev {
+      width: 40%;
+    }
+  }
+
+  @media (max-width: 250px) {
+    .row {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 `;
