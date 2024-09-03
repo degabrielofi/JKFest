@@ -23,7 +23,7 @@ cloudinary.config({
 });
 
 mongoose.connect(
-  "mongodb+srv://degabrielofi:Marley2435@cluster0.lx4u6qq.mongodb.net/JKFest?retryWrites=true&w=majority",
+  "mongodb+srv://degabrielofi:Marley2435@jkfest.70h67.mongodb.net/?retryWrites=true&w=majority&appName=JKFest",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
